@@ -1,5 +1,5 @@
 def main()
-    print_pairs(5, 50)
+    print_pairs(5, 500)
     primes = get_prime_array(5, 25)
     #puts primes
     prime_diffs = get_prime_diffs(5, 25)
@@ -16,21 +16,16 @@ end
 
 def consecutivePrimes(begin_val, end_val)
 
-    #Known bug: Prime always returns 1 as its first prime. Every workaround tried
-    # has returned a nilClass error.
    curr_prime = begin_val
    prime1, prime2 = 1
-   while curr_prime <= end_val 
-        if(is_prime(curr_prime)) 
-            if(prime1 > 0)
-                prime2 = curr_prime
-            
-            else
-                prime1 = curr_prime
-            end
-        end
-        curr_prime += 1
+   while curr_prime <= end_val
+    prime1 = find_next_prime(curr_prime)
+    prime2 = find_next_prime(prime1 + 1) 
 
+        curr_prime = prime2
+        if(curr_prime > end_val)
+            break
+        end
         if(prime1 >= 1 && prime2 > 1)  # english and/or have lower precedence than symbolic &&/||
             
             yield prime1, prime2
@@ -39,6 +34,13 @@ def consecutivePrimes(begin_val, end_val)
         end
    end
    
+end
+
+def find_next_prime(num)
+    while(!is_prime(num))
+    num += 1
+    end
+    num
 end
 
 def is_prime(num)
