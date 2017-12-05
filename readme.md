@@ -1,7 +1,7 @@
 # Computing Paradigms Fall 2k17
 A repository for my projects from Computing Paradigms
 
-##Clojure
+## Clojure
 Two scripts are currently in the folder, both dealing with Gregorian Calendar dates. 
 base10bday.clj calculates the nth base 10 birthday.
 datesbetween.clj is a days between two dates calculator.
