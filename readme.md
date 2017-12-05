@@ -11,6 +11,6 @@ Having just started, there is only a Hello world and an empty file that will hol
 
 ## Ruby
 The files and folders labeled homework are all ruby projects.
-Homework 2 demonstrates usage of yield statements with various squares.
-Homework 3 manipulates the filesystem through commands
-Homework 4 is a Dungeons and Dragons character creator. This is an ongoing project that will improve as time goes one.
+- Homework 2 demonstrates usage of yield statements with various squares.
+- Homework 3 manipulates the filesystem through commands.
+- Homework 4 is a Dungeons and Dragons character creator. This is an ongoing project that will improve as time goes on.
