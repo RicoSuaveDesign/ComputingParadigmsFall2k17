@@ -1,17 +1,21 @@
 def main()
-    print_pairs(5, 500)
-    primes = get_prime_array(5, 25)
-    #puts primes
-    prime_diffs = get_prime_diffs(5, 25)
-    #puts prime_diffs
-    primemids = get_mid_vals(5, 25)
-    #puts primemids
-    avgdiff = find_avg_prime_diff(5, 50)
-    #puts
-    #puts avgdiff.to_s
-    min_and_max = find_min_and_max_prime_diff(5, 50)
+    print_pairs(5, 50)
+    primes = get_prime_array(5, 50)
     puts
-    puts min_and_max
+    puts "Prime array: "
+    puts primes.to_s
+    prime_diffs = get_prime_diffs(5, 50)
+    puts "Differences between prime pairs: "
+    print prime_diffs.to_s + " "
+    puts
+    primemids = get_mid_vals(5, 50)
+    puts "Mid vals between prime pairs: "
+    print primemids.to_s + " "
+    puts 
+    avgdiff = find_avg_prime_diff(5, 50)
+    puts "Average difference between prime pairs: #{avgdiff.to_s}"
+    min_and_max = find_min_and_max_prime_diff(5, 50)
+    puts "Min and max diff between prime pairs: #{min_and_max.to_s}"
 end
 
 def consecutivePrimes(begin_val, end_val)
